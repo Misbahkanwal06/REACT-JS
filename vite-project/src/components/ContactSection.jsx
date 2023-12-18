@@ -3,7 +3,9 @@ import UserForm from './UserForm'
 
 
 function ContactSection() {
+
     return (
+        <>
         <div>
             <h1 className='text-center'>Contact Form</h1>
             <div className="container my-5">
@@ -17,7 +19,9 @@ function ContactSection() {
                 </div>
             </div>
         </div>
-    )
+        </>
+        
+    );
 }
 
 export default ContactSection;

@@ -1,34 +1,41 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-import React from 'react'
+import React, { useState } from 'react'
 
 function UserForm() {
-  return (
-    <div>
-       return (
-    <Form>
+//  const email = "misbah@gmail.com";
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+//  login
+const userlogin= (e)=>{
+  e.preventDefault();
+ const payload = { email, password}
+ console.log(payload);
+ };
+
+
+
+  return (     
+    <Form onSubmit={userlogin}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Control type="email" placeholder="Enter email" value={email} onChange={(e)=> setEmail( e.target.value)}/>
         <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
+          {email}
         </Form.Text>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
+        <Form.Control type="password" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)} />
+        {password}
       </Form.Group>
       <Button variant="primary" type="submit">
         Submit
       </Button>
     </Form>
-  );
-    </div>
+  
   )
 }
 
