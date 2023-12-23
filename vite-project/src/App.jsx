@@ -4,6 +4,7 @@ import Navigationbar2 from './components/navigationbar2';
 import Productsection from './components/productsection';
 import ContactSection from "./components/ContactSection";
 import Counter from './components/Counter';
+import Registrationform from './components/Registrationform';
 
 
 function App() {
@@ -12,9 +13,10 @@ function App() {
 
       <Navigationbar2 />
       {/* <Counter /> */}
-      <Productsection />
-      <ContactSection />
+      {/* <Productsection />
+      <ContactSection /> */}
       {/* <Navigationbar2 /> */}
+      <Registrationform/>
 
 
     </>
